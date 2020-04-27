@@ -16,13 +16,13 @@
       // Home page
       .state('home', {
         url: '/',
-        templateUrl: 'src/shoppinglist/templates/home.template.html'
+        templateUrl: 'src/menuapp/templates/home.template.html'
       })
 
       // Premade list page
       .state('categories', {
         url: '/categories',
-        templateUrl: 'src/shoppinglist/templates/categories.template.html',
+        templateUrl: 'src/menuapp/templates/categories.template.html',
         controller: 'CategoriesController as categories',
         resolve: {
           categoryItems: ['MenuDataService', function (MenuDataService) {
@@ -33,7 +33,7 @@
 
       .state('itemDetail', {
         url: '/items/{categoryName}',
-        templateUrl: 'src/shoppinglist/templates/items.template.html',
+        templateUrl: 'src/menuapp/templates/items.template.html',
         controller: "ItemsController as itemDetail",
         resolve: {
           items: ['MenuDataService', function (MenuDataService) {
