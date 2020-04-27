@@ -1,15 +1,17 @@
 <a ui-sref="home">Home</a> &lt;<a ui-sref="categories">Categories</a> &lt; <span>Items</span>
 
 <h3>Category Info:</h3>
-<span>Name: {{itemDetail.categoryName}}</span><br>
-<span>Short Name: {{itemDetail.categoryShortName}}</span><br>
-<span>Special Instructions: {{itemDetail.categorySpecialInstructions}}</span>
+<div class="coursera_category_card">
+    <span>Name: {{itemDetail.categoryName}}</span><br>
+    <span>Short Name: {{itemDetail.categoryShortName}}</span><br>
+    <span>Special Instructions: {{itemDetail.categorySpecialInstructions}}</span>
+</div>
 
 <br><br>
 <h3>Items Per Category:</h3>
 
-<ul>
-    <li ng-repeat="item in itemDetail.itemsForCategory">
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in itemDetail.itemsForCategory">
         <spam>Name: {{item.name}}</spam> <br>
         <spam>ID: {{item.id}}</spam> <br>
         <spam>Short Name: {{item.short_name}}</spam> <br>

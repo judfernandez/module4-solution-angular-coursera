@@ -2,8 +2,9 @@
 
 <h3>Categories</h3>
 
-<ul>
-    <li ng-repeat="item in categories.allCategories" ui-sref="itemDetail({categoryName: item.short_name})">
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in categories.allCategories"
+        ui-sref="itemDetail({categoryName: item.short_name})">
         <span>Name: {{item.name}}</span><br>
         <span>Short Name: {{item.short_name}}</span><br>
         <span>Special Instructions: {{item.special_instructions}}</span>
