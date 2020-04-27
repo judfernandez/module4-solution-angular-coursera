@@ -1,0 +1,25 @@
+<a ui-sref="home">Home</a> &lt;<a ui-sref="categories">Categories</a> &lt; <span>Items</span>
+
+<h3>Category Info:</h3>
+<span>Name: {{itemDetail.categoryName}}</span><br>
+<span>Short Name: {{itemDetail.categoryShortName}}</span><br>
+<span>Special Instructions: {{itemDetail.categorySpecialInstructions}}</span>
+
+<br><br>
+<h3>Items Per Category:</h3>
+
+<ul>
+    <li ng-repeat="item in itemDetail.itemsForCategory">
+        <spam>Name: {{item.name}}</spam> <br>
+        <spam>ID: {{item.id}}</spam> <br>
+        <spam>Short Name: {{item.short_name}}</spam> <br>
+        <spam>Small Portion Name: {{item.small_portion_name}}</spam> <br>
+        <spam>Small Portion Price: {{item.price_small}}</spam> <br>
+        <spam>Large Portion Name: {{item.large_portion_name}}</spam> <br>
+        <spam>Large Portion Price: {{item.price_large}}</spam> <br>
+        <spam>Description: {{item.description}}</spam>
+    </li>
+</ul>
+
+<a ui-sref="home">Home</a> &lt;<a ui-sref="categories">Categories</a> &lt; <span>Items</span>
+<ui-view></ui-view>
